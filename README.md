@@ -32,7 +32,9 @@ MIDDLEWARE.append("django_browser_reload.middleware.BrowserReloadMiddleware")
 ```
 
 ```sh
-python manage.py tailwind install
+# python manage.py tailwind install
+cd static_src
+npm run dev
 ```
 
 ```sh
