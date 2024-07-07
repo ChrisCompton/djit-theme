@@ -4,7 +4,7 @@
  * If you need the full config, get it from here:
  * https://unpkg.com/browse/tailwindcss@latest/stubs/defaultConfig.stub.js
  */
-
+const defaultTheme = require('tailwindcss/defaultTheme');
 module.exports = {
     content: [
         /**
@@ -42,8 +42,13 @@ module.exports = {
         // '../../**/*.py'
     ],
     theme: {
-        extend: {},
-    },
+        extend: {
+          fontFamily: {
+            sans: ['Arial', 'sans-serif', ...defaultTheme.fontFamily.sans],
+            serif: ['Arial', 'serif', ...defaultTheme.fontFamily.serif],
+          },
+        },
+      },
     plugins: [
         /**
          * '@tailwindcss/forms' is the forms plugin that provides a minimal styling
@@ -55,4 +60,17 @@ module.exports = {
         require('@tailwindcss/aspect-ratio'),
         require('daisyui'),
     ],
+    daisyui: {
+        themes: [
+            {
+                mytheme: {
+                    "primary": "#a991f7",
+                    "secondary": "#f6d860",
+                    "accent": "#37cdbe",
+                    "neutral": "#3d4451",
+                    "base-100": "#ffffff",
+                },
+            },
+        ]
+    },
 }

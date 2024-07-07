@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* 
+* {
+    border: 1px solid #00cc00;
+} */
+
+/* Forms */
+
+.djit-form input {
+    @apply input input-bordered w-full max-w-xs m-2;
+}
+
+.djit-form textarea {
+    @apply textarea textarea-bordered m-2 w-full;
+}
+
+.djit-form form {
+    @apply bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4;
+}
+
+.djit-divider {
+    @apply card bg-white rounded-box grid h-20 flex-grow place-items-center;
+}

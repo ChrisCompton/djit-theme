@@ -15,24 +15,25 @@
 		{% endblock %}
 	</head>
 
-	<body class="bg-white font-serif leading-normal tracking-normal">
+	<body class="bg-white font-serif leading-normal tracking-normal" hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'>
 
 		{% block content %}
 		<div class="indicator">
 			<div class="indicator-item indicator-bottom">
-			  <button class="btn btn-primary">+ DaisyUI</button>
+				<button class="btn btn-primary">+ DaisyUI</button>
 			</div>
+			
 			<div class="card border mt-10">
-			  <div class="card-body">
-				<h2 class="card-title">You did it!</h2>
+				<div class="card-body">
+					<h2 class="card-title">You did it!</h2>
 					<div class="container mx-auto">
 						<section class="flex items-center justify-center">
 							<h1 class="text-5xl" x-data="{ message: 'Django + Tailwind + Alpine + htmx = ❤️' }" x-text="message"></h1>
 						</section>
 					</div>
-			  </div>
+				</div>
 			</div>
-		  </div>
+		</div>
 		{% endblock %}
 
 	</body>
